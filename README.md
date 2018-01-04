@@ -17,7 +17,7 @@
 ![](pictures/Start.png)
 ![](pictures/Play.png)
 
-#### When you lost
+#### When you lose
 
 ![](pictures/Lost-1.png)
 ![](pictures/Lost-2.png)
