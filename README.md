@@ -13,9 +13,14 @@
 #### Welcome Page
 ![](pictures/Welcome.png)
 
-#### The Game ...
+#### The Game
 ![](pictures/Start.png)
+![](pictures/Play.png)
 
-![](pictures/Play-1.png)
+#### When you lost
 
+![](pictures/Lost-1.png)
+![](pictures/Lost-2.png)
 
+#### When you win
+![](pictures/Winner.png)
