@@ -11,65 +11,70 @@
 #define Y 6
 #define The_distance_between_the_characters 2
 #define Computing_Z_Applied 7// The distance between the Computing and Applied
-#define SL 10
+#define SL 25
 
 int Computing_x_Applied=X_coordinate,y_axis=Y;// for print APPLIDE .. .
 int I,O;
 int d,s,A=0,AA=0,WE=0,GH=0,OM=0,MO=0;
 char tempo;// meshan al 2ed5al
-FILE *Link;
+
 FILE *Fi;
 FILE *Xx;
-FILE *Links;
 
 void setcolor(unsigned short color){//    ?EU??? C???? ^_^   ?E?C? ?C EE?I? EE?E??C ??C ???C ?E? 0 9 8 5
     HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hcon,color);
 }
 void gotoxy(double i,double j){// lel ta7akom bel makan 2alathe saystem 2al teba3aa feeh X  &  Y
-	COORD aa={i,j};
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),aa);
+    COORD aa={i,j};
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),aa);
 }
 
-void   Applied_Computing(){
+void     Applied_Computing(){
         system("color 0f");
 int i,o=59,Mm=1,m=23,cc;
-	srand(time(NULL));
+    srand(time(NULL));
 
 system("mode 60, 25");
-   Geometric_Shape();
-   Sleep(1000);
+
+
+for(cc=0;cc<13;cc++)
+for(i=cc,o=59-cc,Mm=1+cc,m=23-cc;i<59;i++){
+Sleep(10);
+    setcolor(cc+1);
+gotoxy(i,cc);
+printf("%c",287);
+
+gotoxy(o,-cc+24);
+printf("%c",286);
+
+gotoxy(cc,Mm);
+printf("%c",272);
+if(Mm<24)
+Mm+=i%2;
+gotoxy(59-cc,m);
+printf("%c",273);
+if(m<24)
+m-=i%2;
+--o;
+
+}
+    setcolor(30);
+gotoxy(30,12);
+printf("%c",4);
+
+
+Sleep(1000);
+
+
 system("mode 75, 25");
     system("cls");
 system("color 4f");
         KOL();
     Computing_x_Applied=X_coordinate;
     y_axis=Y;;
-Sleep(1500);
+Sleep(2000);
 }
-void Geometric_Shape(){
-   int i;int j;
-   system("mode 50,40");
-   for(i=0;i<29;i++)
-   for(j=i;j<=29;j++){
-           setcolor(i%15+1);
-       gotoxy(10+i,5+j);
-       Sleep(5);
-       printf("%c",287);
-       gotoxy(10+j,5+i);
-       Sleep(5);
-       printf("%c",272);
-
-           setcolor(i%15+1);
-       gotoxy(39-i,34-j);
-       Sleep(5);
-       printf("%c",286);
-       gotoxy(39-j,34-i);
-       Sleep(5);
-       printf("%c",273);
-   }
-}
-
 void KOL(){
 A_A();
 p(0);
@@ -544,7 +549,7 @@ void N(){//al 2a3dad 2al 3ashwa2ea Meshan 7araket al To3oom
 
 
 do{
-	srand(time(NULL));
+    srand(time(NULL));
      s=rand()%5;
 
      d=rand()%5;
@@ -594,50 +599,50 @@ fclose(Xx);
 }
 
 void MOM(){// le al nehaee btorsom shakel ^___^
-	int i,j,k;
-	char a[5];
-	system("color 4E");
-	system("cls");
-	system("mode 59, 50");
+    int i,j,k;
+    char a[5];
+    system("color 4E");
+    system("cls");
+    system("mode 59, 50");
 
-	//1st triangle with space priting
-	for(i=0;i<=22;i++)
-	{gotoxy(6,i);
-		for(j=i;22>=j;j++)
-		{
-			printf("%c",178);
-			Sleep(8);
-		}
-		--j;
+    //1st triangle with space priting
+    for(i=0;i<=22;i++)
+    {gotoxy(6,i);
+        for(j=i;22>=j;j++)
+        {
+            printf("%c",178);
+            Sleep(10);
+        }
+        --j;
 gotoxy(j+i+6,i);
-		for(j=22;i<=j;j--)
-		{
-		    printf("%c",178);
-					Sleep(8);
-		}
+        for(j=22;i<=j;j--)
+        {
+            printf("%c",178);
+                    Sleep(10);
+        }
 
 
-	}
+    }
 
-	//2nd triangle with space priting
-	for(i=0;i<=22;i++)
-	{gotoxy(6,i+22);
-		for(j=0;j<=i;j++)
-		{
-			printf("%c",178);
-			Sleep(8);
-		}
+    //2nd triangle with space priting
+    for(i=0;i<=22;i++)
+    {gotoxy(6,i+22);
+        for(j=0;j<=i;j++)
+        {
+            printf("%c",178);
+            Sleep(10);
+        }
 gotoxy(j-i-i+43+6,i+22);
-    	for(j=-0;j<=i;j++)
-		{
-			printf("%c",178);
-			Sleep(8);
-		}
+        for(j=-0;j<=i;j++)
+        {
+            printf("%c",178);
+            Sleep(10);
+        }
 
-	}
-	gotoxy(21,22);
+    }
+    gotoxy(21,22);
 printf("%c You Winner %c",1,1);
-/*	gotoxy(12,24);
+/*  gotoxy(12,24);
 printf("Click Enter to complete",2,2);*/
 
 }
@@ -707,6 +712,7 @@ setcolor(4);
 
 }
 main(){// Main ^_^
+
     char a;
     int VAL[50]={0},V=0,v;
 StartX();
@@ -719,7 +725,6 @@ q= _getch();
     if(q!='1'){
 
         return 0;}
-    system("start link.exe");
 
     system("cls");
 
@@ -745,11 +750,7 @@ while(!(OM==-1)){
 
     gotoxy(X+x+9,z+Z-2);
 
-do{// Scan with file
-    while(!(Link=fopen("secret.txt","r")));
-    fscanf(Link,"%c",&tempo);
-    fclose(Link);
-}while (tempo==NULL);
+tempo =_getch();// meshan eda5el men 3'aer enter
 
 
 
@@ -790,11 +791,7 @@ do{// Scan with file
             gotoxy(X+x+9,z+Z);
             break;
     }
-if(A-MO>500){
-        Links=fopen("Links.txt","w");//*************************************************Links
-        fprintf(Links,"A");
-        fclose(Links);
-        system("DEL secret.txt");
+if(A-MO>400){
     Applied_Computing();
     MOM();
     OMO();
@@ -812,8 +809,6 @@ system("color 4f");
     h();//rasm al 2etar
     N();//al 2a3dad 2al 3ashwa2ea Meshan 7araket al To3oom
     R(I,O);
-    system("start link.exe");
-
 }
 else if(OM==1) {
     A+=OM;
@@ -829,8 +824,6 @@ system("color 4f");
     h();//rasm al 2etar
     N();//al 2a3dad 2al 3ashwa2ea Meshan 7araket al To3oom
     R(I,O);
-    system("start link.exe");
-
 }
 
 }

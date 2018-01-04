@@ -11,13 +11,11 @@
 
 
 #### Welcome Page
-![](pictures/Welcome.jpg)
+![](pictures/Welcome.png)
 
 #### The Game ...
-![](pictures/Start.jpg)
+![](pictures/Start.png)
 
-![](pictures/Play-1.jpg)
+![](pictures/Play-1.png)
 
-![](pictures/Play-3.jpg)
 
-[Video for the game](pictures/GameV1.webm)
